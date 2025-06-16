@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    height: 100vh;
+    padding: 50px 250px;
+    background-color: #e8e8e8;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .index a {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .index a:hover {
+    background-color: #0056b3;
+  }
+  
+  .index ul {
+    list-style-type: none;
+  }
+  
+  .index li {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .index li.complete {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .task-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .task-date {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .task-description {
+    font-size: 16px;
+  }
+  
+  .add {
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  .add form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    resize: none;
+  }
+  
+  .add form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .add form input,
+  .add form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+  }
+  
+  .add form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .add .field-error {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  
+  .delete {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .delete ul {
+    list-style-type: none;
+  }
+  
+  .delete li {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+  }
+  
+  .delete form button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete form button:hover {
+    background-color: #c82333;
+  }
+
+.index .green{
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.index .green:hover {
+    background-color: #218838;
+}
+
+ .index .red {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+.index .red:hover {
+    background-color: #c82333;
+}
+
+.add .green{
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.add .green:hover {
+    background-color: #218838;
+}
+
+
+#filter-form{
+  margin-bottom: 10px;
+}
+
+select{
+  border-radius: 2px;
+  padding: 5px;
+}

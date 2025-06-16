@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}- Top -{% endblock %}
+
+{% block content %}
+<div class="index">
+    <h1>Todo-List</h1>
+    <a href="{% url 'add' %}">タスクを追加</a>
+
+    <ul>
+        <form id="filter-form" method="get" action="{% url 'index' %}">
+            <label for="filter-select">絞り込み</label>
+            <select id="filter-select" name="filter" onchange="document.getElementById('filter-form').submit();">
+              <option value="">すべてのタスク</option>
+              <option value="complete" {% if request.GET.filter == "complete" %}selected{% endif %}>完了タスク</option>
+              <option value="incomplete" {% if request.GET.filter == "incomplete" %}selected{% endif %}>未完了タスク</option>
+            </select>
+          </form>          
+        {% for task in todo_list %}
+        <li class="{% if task.complete %}complete{% endif %}">
+            <form action="{% url 'update_task_complete' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="task_id" value="{{ task.id }}">
+                <input type="checkbox" name="task_id{{ task.id }}" onchange="this.form.submit()" {% if task.complete %}checked{% endif %}>
+                <div class="task-header">
+                    <h3 type="text" name="task_title">{{ task.title }}</h3>
+                    <span class="task-date">{{task.start_date | date:'Y-m-d h:i'}} - {{task.end_date | date:'Y-m-d h:i'}}</span>
+                    <div>
+                        <a href="{% url 'update' pk=task.id %}" class="green">更新</a>
+                        <a href="{% url 'delete' pk=task.id %}" class="red">削除</a>
+                    </div>
+                </div>
+                <p class="task-description">{{task.description}}</p>
+            </form>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+

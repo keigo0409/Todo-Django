@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+- Delete -
+{% endblock %}
+
+{% block content %}
+<h1>タスク削除ページ</h1>
+<div class="delete">
+    <ul>
+        <li>
+            <form action="{% url 'delete' pk=task.id %}" method="post">
+                {% csrf_token %}
+                <div class="delete">
+                    <h3>{{task.title}}</h3>
+                    <p>{{task.description}}</p>
+                </div>
+                <button type="submit" class="red">削除</button>
+            </form>
+        <a href="{% url 'index' %}">一覧へ戻る</a>
+    </ul>
+</div>
+{% endblock %} 
