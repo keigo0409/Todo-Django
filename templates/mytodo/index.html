@@ -9,6 +9,7 @@
 
     <ul>
         <form id="filter-form" method="get" action="{% url 'index' %}">
+            {% csrf_token %}
             <label for="filter-select">絞り込み</label>
             <select id="filter-select" name="filter" onchange="document.getElementById('filter-form').submit();">
               <option value="">すべてのタスク</option>
